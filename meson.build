@@ -10,7 +10,7 @@ python = import('python')
 
 base_id = 'io.github.idevecore.Aria2GUI'
 pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.project_name())
-moduledir = join_paths(pkgdatadir, 'password_manager')
+moduledir = join_paths(pkgdatadir, 'aria2_gui')
 
 if get_option('profile') == 'development'
   profile = 'Devel'

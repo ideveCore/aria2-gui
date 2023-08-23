@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/io/github/idevecore/Aria2GUI">
-    <file preprocess="xml-stripblanks" alias="styles.css">assets/styles.css</file>
+    <file alias="styles.css">assets/styles.css</file>
     <file preprocess="xml-stripblanks">window.ui</file>
     <file preprocess="xml-stripblanks">components/shortcuts/shortcuts.ui</file>
     <file preprocess="xml-stripblanks">components/theme_selector/theme_selector.ui</file>

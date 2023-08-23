@@ -24,6 +24,77 @@
   ],
   "modules": [
     {
+      "name": "blueprint",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
+          "tag": "v0.10.0",
+          "commit": "2a39a16391122af2f3d812e478c1c1398c98b972"
+        }
+      ]
+    },
+    {
+      "name": "aria2p",
+      "buildsystem": "simple",
+      "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"aria2p\" --no-build-isolation"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/1b/2e/e1eba62ca72501efa07002f816e065849b4c26cc212f9c623d72e74993a0/aria2p-0.11.3-py3-none-any.whl",
+          "sha256": "bc0fbe71de360e01e3db4301c89052799e7c4f004ab62fdbaa6bc96d20f476da"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/3b/00/2344469e2084fb287c2e0b57b72910309874c3245463acd6cf5e3db69324/appdirs-1.4.4-py2.py3-none-any.whl",
+          "sha256": "a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/71/bd/337f7a0cd2628c4c77512d78e26f93b13c327a2ddf2132001dd78c000bf4/loguru-0.7.0-py3-none-any.whl",
+          "sha256": "b93aa30099fa6860d4727f1b81f8718e965bb96253fa190fab2077aaad6d15d3"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl",
+          "sha256": "58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl",
+          "sha256": "806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/4b/4a/3176388095e5bae6e6a1fbee66c438809230ae0196e7de4af12c5e75c509/websocket_client-1.6.2-py3-none-any.whl",
+          "sha256": "ce54f419dfae71f4bdba69ebe65bf7f0a93fe71bc009ad3a010aacc3eebad537"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/bf/a0/188f223c7d8b924fb9b554b9d27e0e7506fd5bf9cfb6dbacb2dfd5832b53/charset_normalizer-3.2.0-py3-none-any.whl",
+          "sha256": "8e098148dd37b4ce3baca71fb394c81dc5d9c7728c95df695d2dca218edf40e6"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/fc/34/3030de6f1370931b9dbb4dad48f6ab1015ab1d32447850b9fc94e60097be/idna-3.4-py3-none-any.whl",
+          "sha256": "90b77e79eaa3eba6de819a0c442c0b4ceefc341a7a2ab77d7562bf49f425c5c2"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/9b/81/62fd61001fa4b9d0df6e31d47ff49cfa9de4af03adecf339c7bc30656b37/urllib3-2.0.4-py3-none-any.whl",
+          "sha256": "de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4"
+        },
+        {
+          "type": "file",
+          "url": "https://files.pythonhosted.org/packages/4c/dd/2234eab22353ffc7d94e8d13177aaa050113286e93e7b40eae01fbf7c3d9/certifi-2023.7.22-py3-none-any.whl",
+          "sha256": "92d6037539857d8206b8f6ae472e8b77db8058fec5937a1ef3f54304089edbb9"
+        }
+      ]
+    },
+    {
       "name": "aria2-gui",
       "builddir": true,
       "buildsystem": "meson",

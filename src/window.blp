@@ -1,7 +1,7 @@
 using Gtk 4.0;
-using Adw 1.0;
+using Adw 1;
 
-template Aria2GuiWindow : Adw.AdwApplicationWindow {
+template $Aria2GuiWindow : Adw.ApplicationWindow {
   default-width: 500;
   default-height: 500;
   title: 'Aria2 GUI';
@@ -12,7 +12,7 @@ template Aria2GuiWindow : Adw.AdwApplicationWindow {
       [end]
       Gtk.MenuButton menu_btn {
         icon-name: 'open-menu-symbolic';
-        menu-model: 'primary_menu';
+        menu-model: primary_menu;
       }
     }
     Gtk.Label {

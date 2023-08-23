@@ -20,6 +20,8 @@ configure_file(
 # ===== Blueprint compiler =====
 blueprints = custom_target('blueprints',
   input: files(
+    'components/shortcuts/shortcuts.blp',
+    'components/theme_selector/theme_selector.blp',
     'window.blp',
   ),
   output: '.',
@@ -34,10 +36,12 @@ gnome.compile_resources('aria2-gui',
   install_dir: pkgdatadir,
 )
 
-password_manager_sources = [
+aria2_gui_sources = [
   '__init__.py',
+  'components/shortcuts/shortcuts.py',
+  'components/theme_selector/theme_selector.py',
   'main.py',
   'window.py',
 ]
-
-install_data(password_manager_sources, install_dir: moduledir)
+install_subdir('components', install_dir: moduledir)
+install_data(aria2_gui_sources, install_dir: moduledir)

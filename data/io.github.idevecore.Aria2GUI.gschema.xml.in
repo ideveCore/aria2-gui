@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="aria2-gui">
-  <schema id="@app_id@" path="/io/github/idevecore/Aria2GUI/">
-    <key type="s" name="color-scheme">
-      <choices>
-        <choice value="auto" />
-        <choice value="light" />
-        <choice value="dark" />
-      </choices>
-      <default>"auto"</default>
-    </key>
-  </schema>
+	<schema id="io.github.idevecore.Aria2GUI" path="/io/github/idevecore/Aria2GUI/">
+	</schema>
 </schemalist>

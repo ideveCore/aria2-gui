@@ -1,0 +1,6 @@
+data/io.github.idevecore.Aria2GUI.desktop.in
+data/io.github.idevecore.Aria2GUI.appdata.xml.in
+data/io.github.idevecore.Aria2GUI.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
